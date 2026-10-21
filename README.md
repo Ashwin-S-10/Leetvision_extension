@@ -20,18 +20,17 @@ When you click **Submit** on a LeetCode problem, the extension:
 
 You can review all of your past submissions and analyses on the [Leetvision dashboard](https://leetvision.in).
 
-## Install (beta)
+## Install 
 
 The extension is not on the Chrome Web Store yet. During the beta, install it by loading it unpacked. This works in Chrome, Edge, Brave and other Chromium browsers.
 
-1. Download the code: click **Code → Download ZIP** on this page and unzip it, or clone it:
+1. Download the code: click Code → Download ZIP on this page and unzip it, or **clone it**:
    ```bash
    git clone https://github.com/Ashwin-S-10/Leetvision_extension.git
    ```
-2. Open your browser's extensions page:
+2. Open your browser's extensions page (extension works only on Chrome Browser(version 1), excited to build for other browsers? Submit a PR...:
    - Chrome: `chrome://extensions`
-   - Edge: `edge://extensions`
-   - Brave: `brave://extensions`
+   
 3. Turn on **Developer mode** (top-right toggle in Chrome).
 4. Click **Load unpacked** and pick the folder that contains `manifest.json`.
 5. Pin the Leetvision icon to your toolbar so the popup is easy to reach.
@@ -67,20 +66,6 @@ It does not read other sites, your browsing history or your clipboard. Your sign
 | `storage` | Keeps you signed in between browser sessions. |
 | `activeTab` | Lets the popup interact with the tab you are on. |
 | `https://leetcode.com/*` | Reads your code and the submission verdict on LeetCode. |
-| Leetvision API host | Sends your submission for analysis and handles sign-in. |
-
-## Troubleshooting
-
-| Problem | What to try |
-|---|---|
-| No panel appears after submitting | Refresh the LeetCode tab. If you just installed or reloaded the extension, existing tabs need a refresh. |
-| "Extension updated or reloaded. Please refresh this page" | Press F5 on the LeetCode tab. |
-| "Please sign in again via the extension popup" | Your session expired. Open the popup and sign in again. |
-| "Could not extract code from editor" | Make sure the code editor has finished loading, then submit again. |
-| "You have used all free analyses for today" | Wait until tomorrow, or add your own Gemini API key in [Settings](https://leetvision.in/settings). |
-| "Network error" | Check your connection. The API can take a few seconds to wake up on the first request. |
-
-If none of these help, [open an issue](../../issues) with your browser, its version and the steps you took.
 
 ## How it works
 
@@ -102,6 +87,18 @@ config.js           API and website URLs
 ```
 
 The extension is plain JavaScript on Manifest V3. There is no build step and no dependencies.
+## Troubleshooting
+
+| Problem | What to try |
+|---|---|
+| No panel appears after submitting | Refresh the LeetCode tab. If you just installed or reloaded the extension, existing tabs need a refresh. |
+| "Extension updated or reloaded. Please refresh this page" | Press F5 on the LeetCode tab. |
+| "Please sign in again via the extension popup" | Your session expired. Open the popup and sign in again. |
+| "Could not extract code from editor" | Make sure the code editor has finished loading, then submit again. |
+| "You have used all free analyses for today" | Wait until tomorrow, or add your own Gemini API key in [Settings](https://leetvision.in/settings). |
+| "Network error" | Check your connection. The API can take a few seconds to wake up on the first request. |
+
+If none of these help, [open an issue](../../issues) with your browser, its version and the steps you took.
 
 ## Contributing
 
